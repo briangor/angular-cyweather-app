@@ -1,0 +1,57 @@
+.home {
+    padding: 4% 4%;
+    box-sizing: border-box;
+
+    .inputs {}
+
+    .input-group {
+        width: 70%;
+    }
+
+    .main-chart {
+        border: 1px solid silver;
+        border-radius: 20px;
+
+        &:hover {
+            border-color: rgb(150, 149, 149);
+        }
+    }
+
+    .unit-chart:hover {
+        border: 1px solid silver;
+        border-radius: 20px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    [class*="col-"] {
+        width: 100%;
+    }
+
+    .inputs {
+        text-align: center;
+
+        .input-group {
+            width: 100%;
+        }
+    }
+
+    .main-chart {
+        //border: 1px solid silver !important;
+        border: none !important;
+
+    }
+
+    highcharts-chart {
+        margin: auto;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+}

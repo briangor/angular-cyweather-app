@@ -1,0 +1,81 @@
+<div class="home">
+  <div class="row">
+    <div class="col-md-5 col-sm-12 col-xs-12 inputs">
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Latitude</span>
+        <input
+          type="text"
+          class="form-control"
+          aria-label="Latitude"
+          aria-describedby="basic-addon1"
+          [(ngModel)]="lat"
+        />
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Longitude</span>
+        <input
+          type="text"
+          class="form-control"
+          aria-label="Longitude"
+          aria-describedby="basic-addon1"
+          [(ngModel)]="long"
+        />
+      </div>
+      <button
+        type="button"
+        class="btn btn-primary me-3 mb-3"
+        (click)="getForecast(lat, long)"
+      >
+        Get Forecast
+      </button>
+      <button type="button" class="btn btn-primary mb-3" (click)="getGeoLocation()">
+        Get Current Location
+      </button>
+    </div>
+    <div class="col-md-7 col-sm-12 col-xs-12 main-chart" *ngIf="showChart">
+        <highcharts-chart [Highcharts]="highcharts" [options]="chartOptions">
+        </highcharts-chart>
+    </div>
+  </div>
+
+  <div class="row mb-3 mt-3">
+    <div class="col-md-6 mb-3 unit-chart">
+      <ng-container *ngIf="showChart">
+        <highcharts-chart
+          [Highcharts]="highcharts"
+          [options]="tempChartOptions"
+        >
+        </highcharts-chart>
+      </ng-container>
+    </div>
+    <div class="col-md-6 unit-chart">
+      <ng-container *ngIf="showChart">
+        <highcharts-chart
+          [Highcharts]="highcharts"
+          [options]="humidityChartOptions"
+        >
+        </highcharts-chart>
+      </ng-container>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-md-6 mb-3 unit-chart">
+      <ng-container *ngIf="showChart">
+        <highcharts-chart
+          [Highcharts]="highcharts"
+          [options]="windChartOptions"
+        >
+        </highcharts-chart>
+      </ng-container>
+    </div>
+    <div class="col-md-6 mb-3 unit-chart">
+      <ng-container *ngIf="showChart">
+        <highcharts-chart
+          [Highcharts]="highcharts"
+          [options]="cloudChartOptions"
+        >
+        </highcharts-chart>
+      </ng-container>
+    </div>
+  </div>
+</div>
