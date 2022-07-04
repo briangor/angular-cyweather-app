@@ -20,12 +20,14 @@
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@angular/router": "^14.0.0",
     "bootstrap": "^5.2.0-beta1",
-    "typescript": "~4.7.2",
+    "express": "^4.18.1",
     "highcharts": "^10.1.0",
     "highcharts-angular": "^3.0.0",
+    "path": "^0.12.7",
     "rxjs": "~7.5.0",
     "sweetalert2": "^11.4.19",
     "tslib": "^2.3.0",
+    "typescript": "~4.7.2",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
@@ -41,8 +43,8 @@
     "karma-jasmine-html-reporter": "~1.7.0",
     "typescript": "~4.7.2"
   },
-  "engines" : {
-    "node": "v16.14.2",
+  "engines": {
+    "node": "16.14.2",
     "npm": "8.6.0"
   }
 }
